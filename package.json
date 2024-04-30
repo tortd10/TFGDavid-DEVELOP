@@ -1,0 +1,122 @@
+{
+    "name": "TFGDavid",
+    "version": "5.1.0",
+    "description": "TFGDavid project",
+    "main": "index.js",
+    "engines": {
+        "node": ">=4.0 <12.0.0"
+    },
+    "scripts": {
+        "unit": "jest --coverage",
+        "reports:unit": "npm run unit 1> ../reports/%npm_package_version%/%npm_package_version%-evidencia_Coverage.txt 2> ../reports/%npm_package_version%/%npm_package_version%-evidencia_UnitTest.txt",
+        "reports:lint": "npm run lint:css > ../reports/%npm_package_version%/%npm_package_version%-evidencia_EslintCSS.txt && npm run lint:js > ../reports/%npm_package_version%/%npm_package_version%-evidencia_EslintJS.txt",
+        "reports:all": "make-dir ../reports/%npm_package_version%/ && npm run reports:unit & npm run reports:lint",
+        "webpack:npmInstall:all": "node webpackHandling/installHandling/install.js",
+        "webpack:dev": "webpack --env.dev",
+        "webpack:dev:scss": "webpack --env.dev --env.onlyscss",
+        "webpack:dev:js": "webpack --env.dev  --env.onlyjs",
+        "webpack:prod": "webpack --env.dev=false",
+        "webpack:watch": "webpack --env.dev --watch --mode=development",
+        "report:js": "webpack-bundle-analyzer ./js_report/cartridges/app_storefront_TFGDavid.js.json -m static -r reports/report-TFGDavid-js.html && webpack-bundle-analyzer ./js_report/cartridges/int_redsys.js.json -m static -r reports/report-redsys-js.html && webpack-bundle-analyzer ./js_report/cartridges/app_storefront_base.js.json -m static -r reports/report-app_storefront_base-js.html",
+        "webpack:watch:lint": "webpack --env.dev --env.useLinter --watch",
+        "lint": "npm run lint:css && npm run lint:js",
+        "lint:css": "sgmf-scripts --lint css",
+        "lint:js": "sgmf-scripts --lint js",
+        "deploy:build": "npm run webpack:prod && make-dir ..//%npm_package_version%//build//Prueba-%npm_package_version%//Prueba-%npm_package_version%// && powershell Copy-Item -Path .//Cartridges//* -Destination ..//%npm_package_version%//build//Prueba-%npm_package_version%//Prueba-%npm_package_version% -Recurse -Force && powershell Compress-Archive -Path ..//%npm_package_version%//build//Prueba-%npm_package_version%//* -DestinationPath ..//%npm_package_version%//build//Prueba-%npm_package_version%.zip -force && powershell Remove-Item –path ..//%npm_package_version%//build//Prueba-%npm_package_version% -Recurse -Force"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SalesforceCommerceCloud/storefront-reference-architecture.git"
+    },
+    "author": "Ilya Volodin <ivolodin@demandware.com>",
+    "license": "ISC",
+    "homepage": "https://github.com/SalesforceCommerceCloud/storefront-reference-architecture",
+    "devDependencies": {
+        "@babel/core": "^7.11.6",
+        "@babel/preset-env": "^7.11.5",
+        "@tridnguyen/config": "^2.3.1",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "^8.0.6",
+        "babel-preset-env": "^1.7.0",
+        "chalk": "^1.1.3",
+        "clean-webpack-plugin": "^1.0.1",
+        "copy-webpack-plugin": "^5.0.5",
+        "css-loader": "^0.28.11",
+        "debug": "^4.1.1",
+        "deepmerge": "^3.3.0",
+        "eslint": "^7.2.0",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-plugin-import": "^2.21.2",
+        "eslint-plugin-sitegenesis": "~1.0.0",
+        "globalize": "^1.4.2",
+        "istanbul": "^0.4.5",
+        "lodash": "^4.17.15",
+        "minimist": "^1.2.0",
+        "moment-timezone": "^0.5.26",
+        "node-sass": "^4.14.1",
+        "postcss-loader": "^2.1.6",
+        "properties-parser": "^0.3.0",
+        "request-promise": "^4.2.4",
+        "sass-loader": "^7.3.1",
+        "sgmf-scripts": "^2.3.0",
+        "shelljs": "^0.8.4",
+        "should": "^13.2.3",
+        "style-loader": "^0.21.0",
+        "stylelint": "^8.4.0",
+        "stylelint-config-standard": "^17.0.0",
+        "stylelint-scss": "^2.5.0",
+        "stylelint-webpack-plugin": "^0.10.5",
+        "terser-webpack-plugin": "^1.2.3",
+        "url": "^0.11.0",
+        "webpack-cli": "^3.3.12",
+        "xml2js": "^0.4.22"
+    },
+    "dependencies": {
+        "babel": "^6.23.0",
+        "bootstrap": "^4.3.1",
+        "bootstrap-daterangepicker": "3.1.0",
+        "bootstrap-slider": "^11.0.2",
+        "cleave.js": "^1.5.3",
+        "flag-icon-css": "^2.9.0",
+        "font-awesome": "^4.7.0",
+        "jest": "^26.2.2",
+        "jest-sonar-reporter": "^2.0.0",
+        "jest-worker": "^26.2.1",
+        "jquery": "^3.5.1",
+        "make-dir-cli": "^2.0.0",
+        "moment": "^2.29.1",
+        "oauth-pkce": "0.0.4",
+        "popper.js": "^1.16.1",
+        "webpack-bundle-analyzer": "^3.9.0"
+    },
+    "paths": {
+        "base": "cartridges/app_storefront_base/",
+        "app_storefront_TFGDavid": "cartridges/app_storefront_TFGDavid/"
+    },
+    "brandCartridges": {
+        "base": "app_storefront_base",
+        "app_storefront_TFGDavid": "app_storefront_TFGDavid"
+    },
+    "packageName": "app_storefront_base",
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ]
+    },
+    "jestSonar": {
+        "reportPath": ".",
+        "reportFile": "./reports/jest-test-reporter.xml",
+        "indent": 4,
+        "useRelativePath": "true"
+    },
+    "brandCartridgeList": {
+        "base": {
+            "css": [
+                "app_storefront_base"
+            ],
+            "js": [
+                "app_storefront_base"
+            ]
+        }
+    }
+}

@@ -1,0 +1,11 @@
+cartridges/app_storefront_base/
+cartridges/app_storefront_TFGDavid/cartridge/static
+cartridges/bm_app_storefront_base/
+cartridges/modules/
+coverage/
+doc/
+bin/
+webpackHandling/
+codecept.conf.js
+webpack.config.js
+cartridges/app_storefront_TFGDavid/cartridge/client/default/js/thirdParty/

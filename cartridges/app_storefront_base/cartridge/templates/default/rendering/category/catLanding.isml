@@ -1,0 +1,12 @@
+<isdecorate template="common/layout/page">
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addCss('/css/search.css');
+    </isscript>
+
+    <div class="container">
+        <div class="secondary-content"></div>
+    </div>
+
+</isdecorate>
