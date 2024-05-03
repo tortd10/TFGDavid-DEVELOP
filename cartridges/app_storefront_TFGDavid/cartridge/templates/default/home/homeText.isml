@@ -1,0 +1,71 @@
+<div class="container text-center">
+  <div class="row mt-2 mb-2">
+    <div class="col">
+		<div class="fotos">	
+			<img alt="First img" class="w-50 imghome" src="${URLUtils.staticURL('/img/Servicios.jpg')}" title="" />
+		</div>
+    	<h1 class="titleText mt-2">Servicios TI</h1>
+		<div class="normalText">
+			<li>Servidores, Clústers y Granjas</li>
+			<li>Licencias de Software</li>
+			<li>Gestión de Infraestructuras</li>
+			<li>Integración de Sistemas</li>
+			<li>Mantenimiento Predictivo\Preventivo\Correctivo</li>
+			<li>Asesoramiento y Soporte</li>
+			<li>Proyectos de Seguridad</li>
+			<li>Backup Online</li>
+			<li>Networking</li>
+			<li>Outsourcing\Help Desk</li>
+		</div>
+    </div>
+    <div class="col">
+		<div class="fotos">
+			<img alt="Second img" class="w-50 imghome" src="${URLUtils.staticURL('/img/Diseño.jpg')}" title="" />
+		</div>
+		<h1 class="titleText mt-2">Desarrollo y Diseño Web</h1>
+		<div class="normalText">
+			<li>Desarrollo de plataformas CMS</li>
+			<li>Aplicaciones web  para empresas</li>
+			<li>E-comerce - Comercio eléctronico</li>
+			<li>Hosting \ Gestión Dominios</li>
+			<li>Infonou Cloud</li>
+			<li>Servicios de Conectividad</li>
+			<li>Implementación aplicaciones de gestión</li>
+			<li>Sitios web comerciales</li>
+			<li>Gestores de contenido a medida</li>
+			<li>Posicionamiento SEO y SEM
+		</div>
+    </div>
+    <div class="col">
+		<div class="fotos">
+			<img alt="Third img" class="w-50 imghome" src="${URLUtils.staticURL('/img/Software.jpg')}" title="" />
+		</div>
+    	<h1 class="titleText mt-2">Software</h1>
+		<div class="normalText">
+			<li>Gestión Empresarial - ERP</li>
+			<li>Gestión Empresarial - CRM</li>
+			<li>Terminales Punto de Venta - TPV</li>
+			<li>Consultoria, análisis y proyectos</li>
+			<li>Optimización procesos Empresariales</li>
+			<li>Desarrollo a medida</li>
+			<li>Sistemas Criticos</li>
+			<li>Software Vertical y Sectorial</li>
+			<li>Integración de ERP externa</li>
+			<li>BBDD SQL/Server -Oracle</li>
+		</div>
+    </div>
+  </div>
+</div>
+
+<div class="menuCategory mt-5">
+	<div class="menuCategoryItem">
+		<isloop items="${pdict.categories.categories}" var="category">
+			<div class="card" style="width: 18rem;">
+				<img src="..." class="card-img-top" alt="...">
+				<div class="card-body">
+					<a href="<isprint value="${category.url}" encoding="htmldoublequote"/>" id="${category.id}" class="nav-link card-text" role="link" tabindex="0">${category.name}</a>
+				</div>
+			</div>
+		</isloop>
+	</div>
+</div>

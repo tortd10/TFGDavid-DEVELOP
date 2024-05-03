@@ -9,7 +9,9 @@
     <div class="home-main homepage">
         <isslot id="home-main-m" description="Main home page slot." context="global" />
     </div>
-	<h1 class="prba1">HOLAAAAAAAAAAAAAAAAA</h1>
+	<div class="homeText">
+		<isinclude template="home/homeText" />
+	</div>
     <div class="home-email-signup">
         <div class="container">
             <form role="form">
