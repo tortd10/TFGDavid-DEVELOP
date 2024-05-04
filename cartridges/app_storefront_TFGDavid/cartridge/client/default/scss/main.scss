@@ -12,6 +12,21 @@
     font-size: smaller;
 }
 
+.empresaDiv{
+	display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.exmpresaText{
+	text-align: left;
+    margin-left: 10rem;
+}
+
+.backimg{
+	opacity: 0.75;
+}
+
 .menuCategoryItem{
 	display: flex;
     justify-content: center;

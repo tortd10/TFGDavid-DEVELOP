@@ -2,7 +2,7 @@
   <div class="row mt-2 mb-2">
     <div class="col">
 		<div class="fotos">	
-			<img alt="First img" class="w-50 imghome" src="${URLUtils.staticURL('/img/Servicios.jpg')}" title="" />
+			<img alt="First img" class="w-50 imghome" src="${URLUtils.staticURL('/img/Servicios.jpg')}" />
 		</div>
     	<h1 class="titleText mt-2">Servicios TI</h1>
 		<div class="normalText">
@@ -20,7 +20,7 @@
     </div>
     <div class="col">
 		<div class="fotos">
-			<img alt="Second img" class="w-50 imghome" src="${URLUtils.staticURL('/img/Diseño.jpg')}" title="" />
+			<img alt="Second img" class="w-50 imghome" src="${URLUtils.staticURL('/img/Diseño.jpg')}"/>
 		</div>
 		<h1 class="titleText mt-2">Desarrollo y Diseño Web</h1>
 		<div class="normalText">
@@ -38,7 +38,7 @@
     </div>
     <div class="col">
 		<div class="fotos">
-			<img alt="Third img" class="w-50 imghome" src="${URLUtils.staticURL('/img/Software.jpg')}" title="" />
+			<img alt="Third img" class="w-50 imghome" src="${URLUtils.staticURL('/img/Software.jpg')}"/>
 		</div>
     	<h1 class="titleText mt-2">Software</h1>
 		<div class="normalText">
@@ -55,6 +55,33 @@
 		</div>
     </div>
   </div>
+</div>
+
+<div class="mt-5">
+  <div class="empresaDiv">
+    <div class="col exmpresaText">
+      <h1>Informática para empresas</h1>
+	  <p>Nuestro objetivo:<p>
+	  <h4>- Ser el mejor colaborador tecnológico de nuestros clientes.</h4>
+	  <p>ALLADA, experta en informática para empresas, esta formada por un gran equipo profesional con demostrada y amplia experiencia en el sector informático. Gestionamos desde hace más de 20 años numerosas e importantes infraestructuras TI de empresas. También, desarrollamos y comercializamos productos y servicios informáticos, así como proyectos de alta componente de innovación.<p>
+	  <button type="button" class="btn btn-primary">Más infomación</button>
+    </div>
+    <div class="col">
+		<img alt="Empresa img" class="w-50" src="${URLUtils.staticURL('/img/empresa_inicio.jpg')}"/>
+    </div>
+  </div>
+</div>
+
+<div class="carousel slide mt-5">
+	<div class="carousel-inner">
+	  	<div class="carousel-item active">
+			<img alt="backimg" class="backimg w-100" src="${URLUtils.staticURL('/img/background_Image.jpg')}"/>
+			<div class="carousel-caption d-none d-md-block">
+				<h1>Soluciones informáticas integrales</h1>
+				<h4>Garantizamos la completa satisfacción de nuestro CLIENTE, generando un servicio adecuado y oportuno, con el fin de ofrecer las soluciones informáticas requeridas en su empresa, mediante la implementación de tecnología  punta y una gestión empresarial a medida, con el único propósito de optimizar la productividad y eficiencia en sus procesos operacionales.</h4>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="menuCategory mt-5">
