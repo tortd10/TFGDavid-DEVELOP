@@ -24,6 +24,11 @@ server.prepend('Show', function (req, res, next) {
 			
     var viewData = res.getViewData(); 
 	viewData.categories =  new Categories(topLevelCategories);
+	var i=0;
+	while(topLevelCategories.length != i){
+		viewData.categories.categories[i].img = topLevelCategories[i].image;
+		i++;
+	}
     
     next();
 });

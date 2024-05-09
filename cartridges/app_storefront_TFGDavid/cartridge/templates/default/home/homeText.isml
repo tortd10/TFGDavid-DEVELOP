@@ -88,9 +88,10 @@
 	<div class="menuCategoryItem">
 		<isloop items="${pdict.categories.categories}" var="category">
 			<div class="card" style="width: 18rem;">
-				<img src="..." class="card-img-top" alt="...">
+				<img src="${category.img.URL}" class="card-img-top" alt="${category.img.alt}">
 				<div class="card-body">
-					<a href="<isprint value="${category.url}" encoding="htmldoublequote"/>" id="${category.id}" class="nav-link card-text" role="link" tabindex="0">${category.name}</a>
+					<a href="<isprint value="${category.url}" encoding="htmldoublequote"/>" id="${category.id}" class="nav-link card-text" role="link" tabindex="0">
+					${category.name}</a>
 				</div>
 			</div>
 		</isloop>
