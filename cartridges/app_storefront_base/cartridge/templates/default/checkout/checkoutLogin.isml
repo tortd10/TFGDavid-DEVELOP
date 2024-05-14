@@ -43,7 +43,6 @@
                     </div>
                     <div class="card-body">
                         <isinclude template="account/components/loginForm" />
-                        <isinclude template="account/password/requestPasswordResetModal"/>
                         <isinclude template="account/components/oauth" />
                     </div>
                 </div>

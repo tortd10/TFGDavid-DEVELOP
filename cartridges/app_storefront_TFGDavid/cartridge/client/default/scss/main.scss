@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .imghome{
 	height: 170px;
 }
@@ -32,4 +34,18 @@
     justify-content: center;
     align-items: center;
 	gap: 1rem;
+}
+
+.brand1 {
+    position: absolute;
+    display: block;
+    text-align: center;
+
+	width: 13.125em; /* 226/16 */
+	margin-left: -7.0625em; /* 113/16 */
+	padding-top: 0.5em;
+
+    img {
+        width: 100%;
+    }
 }
