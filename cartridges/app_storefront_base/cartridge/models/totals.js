@@ -63,8 +63,7 @@ function createDiscountObject(collection, discounts) {
                 lineItemText: item.lineItemText,
                 price: formatMoney(item.price),
                 type: 'promotion',
-                callOutMsg: (typeof item.promotion !== 'undefined' && item.promotion !== null) ? item.promotion.calloutMsg.markup : '',
-                details: (typeof item.promotion !== 'undefined' && item.promotion !== null) ? item.promotion.details.markup : ''
+                callOutMsg: (typeof item.promotion !== 'undefined' && item.promotion !== null) ? item.promotion.calloutMsg : ''
             };
         }
     });
@@ -81,10 +80,9 @@ function getDiscounts(lineItemContainer) {
     var discounts = {};
 
     collections.forEach(lineItemContainer.couponLineItems, function (couponLineItem) {
-        var priceAdjustments = collections.map(
-            couponLineItem.priceAdjustments, function (priceAdjustment) {
-                return { callOutMsg: (typeof priceAdjustment.promotion !== 'undefined' && priceAdjustment.promotion !== null) ? priceAdjustment.promotion.calloutMsg : '' };
-            });
+        var priceAdjustments = collections.map(couponLineItem.priceAdjustments, function (priceAdjustment) {
+            return { callOutMsg: (typeof priceAdjustment.promotion !== 'undefined' && priceAdjustment.promotion !== null) ? priceAdjustment.promotion.calloutMsg : '' };
+        });
         discounts[couponLineItem.UUID] = {
             type: 'coupon',
             UUID: couponLineItem.UUID,

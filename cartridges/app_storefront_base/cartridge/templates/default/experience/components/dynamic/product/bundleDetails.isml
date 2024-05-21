@@ -87,5 +87,7 @@
 
     <isinclude template="product/components/descriptionAndDetails" />
 
-
+    <div class="recommendations">
+        <isslot id="product-recommendations-m" description="Recommended products" context="global" />
+    </div>
 </div>

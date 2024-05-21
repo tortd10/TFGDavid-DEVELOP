@@ -9,7 +9,7 @@
                     src="${bundledLineItem.images.small[0].url}"
                     alt="${bundledLineItem.images.small[0].alt}"
                     title="${bundledLineItem.images.small[0].title}"
-                />
+                >
             </div>
             <div class="item-attributes">
                 <isloop items="${bundledLineItem.variationAttributes}" var="attribute">

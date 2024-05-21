@@ -1,4 +1,4 @@
-<div class="card product-info col-12 uuid-${lineItem.UUID}">
+<div class="card product-info uuid-${lineItem.UUID}">
     <!--- name and remove buttons --->
     <isinclude template="cart/productCard/cartProductCardHeader" />
 

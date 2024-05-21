@@ -88,5 +88,7 @@
 
         <isinclude template="cart/cartRemoveCouponModal"/>
     </isif>
-    <div class="container"></div>
+    <div class="container">
+        <isslot id="cart-recommendations-m" description="Recommended products" context="global" />
+    </div>
 </isdecorate>

@@ -11,7 +11,7 @@
         <isset name="price" value="${product.price}" scope="page" />
         <isif condition="${product.productType === 'set'}">
             <isinclude template="product/components/pricing/setPrice" />
-        <iselse/>
+        <iselse>
             <isinclude template="product/components/pricing/main" />
         </isif>
 

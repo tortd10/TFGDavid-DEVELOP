@@ -18,11 +18,11 @@
         </div>
         <isif condition="${product.images['large'].length > 1}">
             <a class="carousel-control-prev" href="${"#"}pdpCarousel-${product.id}" role="button" data-slide="prev">
-                <span class="loicon-left" aria-hidden="true"></span>
+                <span class="fa icon-prev" aria-hidden="true"></span>
                 <span class="sr-only">${Resource.msg('button.previous', 'common', null)}</span>
             </a>
             <a class="carousel-control-next" href="${"#"}pdpCarousel-${product.id}" role="button" data-slide="next">
-                <span class="loicon-right" aria-hidden="true"></span>
+                <span class="fa icon-next" aria-hidden="true"></span>
                 <span class="sr-only">${Resource.msg('button.next', 'common', null)}</span>
             </a>
         </isif>

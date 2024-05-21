@@ -7,7 +7,7 @@
 <isset name="product" value="${pdict.product}" scope="page" />
 <isset name="isQuickView" value="${false}" scope="page" />
 <isset name="isProductSet" value="${pdict.product.productType === 'set'}" scope="page" />
-<isobject object="${product.raw}" view="detail" />
+<isobject object="${product.raw}" view="detail">
     <div class="container product-detail product-wrapper" data-pid="${product.id}">
         <div class="row">
             <div class="col-12">
@@ -130,10 +130,15 @@
             </div>
         </div>
 
-
+        <div>
+            <isslot id="cts-recommendations-m" description="Complete the set products" context="global" context-object="${pdict.product.raw}" />
+        </div>
 
         <isset name="loopState" value="{count: 1}" scope="page" />
         <isinclude template="product/components/descriptionAndDetails" />
 
+        <div class="recommendations">
+            <isslot id="product-recommendations-m" description="Recommended products" context="global" context-object="${pdict.product.raw}" />
+        </div>
     </div>
 </isobject>

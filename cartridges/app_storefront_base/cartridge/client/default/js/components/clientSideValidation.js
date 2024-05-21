@@ -15,7 +15,7 @@ function validateForm(event) {
             event.stopPropagation();
             event.stopImmediatePropagation();
         }
-        $(this).find('input, select, textarea').each(function () {
+        $(this).find('input, select').each(function () {
             if (!this.validity.valid) {
                 $(this).trigger('invalid', this.validity);
             }
@@ -35,7 +35,7 @@ function clearForm(form) {
 
 module.exports = {
     invalid: function () {
-        $('form input, form select, form textarea').on('invalid', function (e) {
+        $('form input, form select').on('invalid', function (e) {
             e.preventDefault();
             this.setCustomValidity('');
             if (!this.validity.valid) {

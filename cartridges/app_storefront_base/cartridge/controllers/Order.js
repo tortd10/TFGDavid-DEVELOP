@@ -25,7 +25,7 @@ var consentTracking = require('*/cartridge/scripts/middleware/consentTracking');
  * @param {category} - sensitive
  * @param {serverfunction} - get
  */
-server.get(
+server.post(
     'Confirm',
     consentTracking.consent,
     server.middleware.https,
@@ -36,13 +36,19 @@ server.get(
         var OrderModel = require('*/cartridge/models/order');
         var Locale = require('dw/util/Locale');
 
-        var order = OrderMgr.getOrder(req.querystring.ID);
-        var token = req.querystring.token ? req.querystring.token : null;
+        var order;
 
-        if (!order
-            || !token
-            || token !== order.orderToken
-            || order.customer.ID !== req.currentCustomer.raw.ID
+        if (!req.form.orderToken || !req.form.orderID) {
+            res.render('/error', {
+                message: Resource.msg('error.confirmation.error', 'confirmation', null)
+            });
+
+            return next();
+        }
+
+        order = OrderMgr.getOrder(req.form.orderID, req.form.orderToken);
+
+        if (!order || order.customer.ID !== req.currentCustomer.raw.ID
         ) {
             res.render('/error', {
                 message: Resource.msg('error.confirmation.error', 'confirmation', null)
@@ -291,8 +297,7 @@ server.get(
         if (order && orderCustomerNo === currentCustomerNo) {
             var orderModel = orderHelpers.getOrderDetails(req);
             var exitLinkText = Resource.msg('link.orderdetails.orderhistory', 'account', null);
-            var exitLinkUrl =
-                URLUtils.https('Order-History', 'orderFilter', req.querystring.orderFilter);
+            var exitLinkUrl = URLUtils.https('Order-History', 'orderFilter', req.querystring.orderFilter);
             res.render('account/orderDetails', {
                 order: orderModel,
                 exitLinkText: exitLinkText,
@@ -379,8 +384,7 @@ server.post(
         if (newPassword !== confirmPassword) {
             passwordForm.valid = false;
             passwordForm.newpasswordconfirm.valid = false;
-            passwordForm.newpasswordconfirm.error =
-                Resource.msg('error.message.mismatch.newpassword', 'forms', null);
+            passwordForm.newpasswordconfirm.error = Resource.msg('error.message.mismatch.newpassword', 'forms', null);
         }
 
         var order = OrderMgr.getOrder(req.querystring.ID);

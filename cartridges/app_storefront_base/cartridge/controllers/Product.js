@@ -20,7 +20,7 @@ var pageMetaData = require('*/cartridge/scripts/middleware/pageMetaData');
  * @property {String} info_selectforstock - Localized string for "Select Styles for Availability"
  */
 
-  /**
+/**
   * Product-Show : This endpoint is called to show the details of the selected product
   * @name Base/Product-Show
   * @function
@@ -47,7 +47,6 @@ server.get('Show', cache.applyPromotionSensitiveCache, consentTracking.consent, 
             // the page itself is a remote include and can still be cached
             res.cachePeriod = 0; // eslint-disable-line no-param-reassign
         }
-
         if (pageLookupResult.page) {
             res.page(pageLookupResult.page.ID, {}, pageLookupResult.aspectAttributes);
         } else {
@@ -115,8 +114,7 @@ server.get('Variation', function (req, res, next) {
     var product = ProductFactory.get(params);
 
     var context = {
-        price: product.price,
-        financingQuota: product.financingQuota
+        price: product.price
     };
 
     product.price.html = priceHelper.renderHtml(priceHelper.getHtmlContext(context));
@@ -287,7 +285,8 @@ server.get('ShowBonusProducts', function (req, res, next) {
                 product = ProductFactory.get({
                     pid: param,
                     pview: 'bonus',
-                    duuid: duuid });
+                    duuid: duuid
+                });
                 return product;
             });
         } else {
