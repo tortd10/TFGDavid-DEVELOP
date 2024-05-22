@@ -17,7 +17,7 @@
                         <div class="result-count text-center col-12 col-md-9 col-sm-6 order-sm-2">
                             <isinclude template="search/resultsCount" />
                         </div>
-                        <div class="col-6 col-sm-3 order-sm-1">
+                        <div class="col-6 col-sm-3 order-sm-1 mb-3">
                             <isinclude template="search/sortOrderMenu" />
                         </div>
                         <div class="col-6 col-sm-3 text-right d-md-none order-sm-3">

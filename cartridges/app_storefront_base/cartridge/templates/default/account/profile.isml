@@ -4,9 +4,6 @@
         assets.addCss('/css/account/profile.css');
         assets.addJs('/js/profile.js');
     </isscript>
-    <div class="hero slant-down account-image">
-        <h1 class="page-title">${Resource.msg('label.profile','account',null)}</h1>
-    </div>
     <div class="container">
         <!---Breadcrumbs--->
         <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>

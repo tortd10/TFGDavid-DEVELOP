@@ -9,12 +9,9 @@
         <isinclude template="reporting/reportingUrls" />
     </isif>
 
-    <div class="hero slant-down hero-confirmation">
-        <h1 class="page-title">${Resource.msg('title.thank.you.page','confirmation',null)}</h1>
-    </div>
     <div class="container receipt <isif condition="${pdict.order.shipping.length > 1}">multi-ship</isif>">
         <div class="row">
-            <div class="${pdict.returningCustomer ? 'col-sm-6 offset-sm-3' : 'col-sm-6 offset-sm-3 offset-md-0'}">
+            <div class="${pdict.returningCustomer ? 'col-sm-6 offset-sm-3' : 'col-sm-6 offset-sm-3 offset-md-0 mt-3'}">
                 <h2 class="order-thank-you-msg">${Resource.msg('msg.placed.order.thank.you','confirmation',null)}</h2>
                 <isif condition="${pdict.order.orderEmail}">
                     <p class="order-thank-you-email-msg"><isprint value="${Resource.msgf('info.receive.email.confirmation', 'confirmation', null, pdict.order.orderEmail)}" encoding="htmlcontent" /></p>

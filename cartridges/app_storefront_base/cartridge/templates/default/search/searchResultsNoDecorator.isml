@@ -57,7 +57,7 @@
                     </isif>
 
                     <isif condition="${pdict.productSearch.productIds.length > 0}">
-                        <div class="col-6 col-sm-3 order-sm-1">
+                        <div class="col-6 col-sm-3 order-sm-1 mb-3">
                             <isinclude template="search/sortOrderMenu" />
                         </div>
 

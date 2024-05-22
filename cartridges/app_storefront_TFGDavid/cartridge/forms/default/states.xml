@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+	<field formid="stateCode" label="label.input.state" type="string" mandatory="true" binding="stateCode" missing-error="address.state.missing" value-error="address.field.invalid" parse-error="error.message.required">
+		<options>
+			<option optionid="" 	label="resource.select" 		value=""/>
+
+			<option optionid="AL" label="state.es.alava" value="AL"/>
+			<option optionid="AB" label="state.es.albacete" value="AB"/>
+			<option optionid="AC" label="state.es.alicante" value="AC"/>
+			<option optionid="AL" label="state.es.almeria" value="AL"/>
+			<option optionid="AS" label="state.es.asturias" value="AS"/>
+			<option optionid="AV" label="state.es.avila" value="AV"/>
+			<option optionid="BA" label="state.es.badajoz" value="BA"/>
+			<option optionid="B" label="state.es.barcelona" value="B"/>
+			<option optionid="BU" label="state.es.burgos" value="BU"/>
+			<option optionid="CC" label="state.es.caceres" value="CC"/>
+			<option optionid="CA" label="state.es.cadiz" value="CA"/>
+			<option optionid="S" label="state.es.cantabria" value="S"/>
+			<option optionid="CS" label="state.es.castellon" value="CS"/>
+			<option optionid="CE" label="state.es.ceuta" value="CE"/>
+			<option optionid="CR" label="state.es.ciudadreal" value="CR"/>
+			<option optionid="CO" label="state.es.cordoba" value="CO"/>
+			<option optionid="CU" label="state.es.cuenca" value="CU"/>
+			<option optionid="GI" label="state.es.girona" value="GI"/>
+			<option optionid="GR" label="state.es.granada" value="GR"/>
+			<option optionid="GU" label="state.es.guadalajara" value="GU"/>
+			<option optionid="SS" label="state.es.gipuzkoa" value="SS"/>
+			<option optionid="H" label="state.es.huelva" value="H"/>
+			<option optionid="HU" label="state.es.huesca" value="HU"/>
+			<option optionid="J" label="state.es.jaen" value="J"/>
+			<option optionid="LP" label="state.es.laspalmas" value="LP"/>
+			<option optionid="LE" label="state.es.leon" value="LE"/>
+			<option optionid="L" label="state.es.lleida" value="L"/>
+			<option optionid="LU" label="state.es.lugo" value="LU"/>
+			<option optionid="M" label="state.es.madrid" value="M"/>
+			<option optionid="MA" label="state.es.malaga" value="MA"/>
+			<option optionid="ML" label="state.es.melilla" value="ML"/>
+			<option optionid="MU" label="state.es.murcia" value="MU"/>
+			<option optionid="NA" label="state.es.navarra" value="NA"/>
+			<option optionid="OR" label="state.es.ourense" value="OR"/>
+			<option optionid="P" label="state.es.palencia" value="P"/>
+			<option optionid="PO" label="state.es.pontevedra" value="PO"/>
+			<option optionid="LO" label="state.es.rioja" value="LO"/>
+			<option optionid="SA" label="state.es.salamanca" value="SA"/>
+			<option optionid="SG" label="state.es.segovia" value="SG"/>
+			<option optionid="SE" label="state.es.sevilla" value="SE"/>
+			<option optionid="SO" label="state.es.soria" value="SO"/>
+			<option optionid="T" label="state.es.tarragona" value="T"/>
+			<option optionid="TF" label="state.es.santacruztenerife" value="TF"/>
+			<option optionid="TE" label="state.es.teruel" value="TE"/>
+			<option optionid="TO" label="state.es.toledo" value="TO"/>
+			<option optionid="V" label="state.es.valencia" value="V"/>
+			<option optionid="VA" label="state.es.valladolid" value="VA"/>
+			<option optionid="BI" label="state.es.bizkaia" value="BI"/>
+			<option optionid="ZA" label="state.es.zamora" value="ZA"/>
+			<option optionid="Z" label="state.es.zaragoza" value="Z"/>
+		</options>
+	</field>
+</form>

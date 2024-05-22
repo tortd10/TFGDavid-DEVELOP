@@ -5,9 +5,6 @@
         assets.addJs('/js/login.js');
     </isscript>
 
-    <div class="hero slant-down login-banner">
-        <h1 class="page-title">${Resource.msg('header.hero.image.login', 'login', null)}</h1>
-    </div>
     <div class="container login-page">
         <!---Breadcrumbs--->
         <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
